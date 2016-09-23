@@ -13,7 +13,7 @@ spec:
   restartPolicy: OnFailure
   containers:
     - name: apply-labels
-      image: elevy/aws-node-labels:latest
+      image: scopej/aws-node-labels:latest
       env:
         - name: POD_NAME
           valueFrom:
