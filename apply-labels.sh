@@ -18,10 +18,10 @@ while [ "x$NODE" = "x" ] || [ "$NODE" = "null" ]; do
 done
 
 echo "[$(date)] Node: $NODE"
-if [ -n "$PUBLIC_IP" ]; then
-  IS_PUBLIC=true
-else
+if [ x == x$PUBLIC_IP ]; then
   IS_PUBLIC=false
+else
+  IS_PUBLIC=true
 fi
 
 curl  -s \
