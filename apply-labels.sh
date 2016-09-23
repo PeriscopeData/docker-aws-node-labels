@@ -1,6 +1,6 @@
 #!/bin/sh
 
-MD="curl -s http://169.254.169.254/latest/meta-data/"
+MD="curl -fs http://169.254.169.254/latest/meta-data/"
 INSTANCE_ID=`${MD}/instance-id`
 SECURITY_GROUPS=`${MD}/security-groups | tr '\n' ','`
 PUBLIC_IP=`${MD}/public-ipv4`
